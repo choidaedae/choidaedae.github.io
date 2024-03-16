@@ -3,7 +3,7 @@ title:               Daehyeon Choi
 tagline:             'Undergraduate Intern @ VGI Lab. SNU'
 description:         'I am Daehyeon Choi, and I am Undergraduate in POTSECH. I am working as a Research Intern in VGI Lab. @ SNU. I am intersted in Generative Model and its various applications.'
 url:                 http://choidaedae.github.io/
-baseurl:             'github.com/choidaedae/choidaedae.github.io/'
+baseurl:             'http://choidaedae.github.io/choidaedae.github.io/'
 paginate:            5
 permalink:           pretty
 
