@@ -7,6 +7,9 @@ title: Daehyeon Choi
 
 ![My Selfie](./../_assets/selfie.jpg)
 
+(Update) From June 24th, I will work as an Intern at [GenGenAI](http://gengen.ai/). I'm looking forward to it.
+
+
 Hi there :) I am Daehyeon Choi, Undergraduate student in POSTECH [Pohang Institute of Science & Technology](http://postech.ac.kr), and I am Undergraduate Intern in Visual & Geometric Lab, in Seoul National University. My advisor is Professor [Jaesik Park](http://jaesik.info).
 
 Since a few years ago, I have interested in Artificial Intelligence and Deep Learning, and I started my career by studying Computer Vision. Currently, I am interested in Generative Model, especially Score-Based Models. 
