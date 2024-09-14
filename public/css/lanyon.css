@@ -41,16 +41,18 @@ body {
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px; /* 폰트 크기를 18px로 변경 */
+  line-height: 1.6; /* 라인 높이를 1.6으로 설정 */
+  color: #333; /* 텍스트 색상을 다크 그레이로 변경 */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
   color: #313131;
   letter-spacing: -.025rem;
 }
-
 
 /*
  * Wrapper
@@ -72,17 +74,38 @@ h1, h2, h3, h4, h5, h6 {
  * Center the page content.
  */
 
-.container {
-  max-width: 28rem;
+* {
+  box-sizing: border-box;
 }
-@media (min-width: 38em) {
-  .container {
-    max-width: 32rem;
-  }
+
+.profile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
+
+.profile-photo {
+  flex: 1;
+  max-width: 170px;
+  margin-right: 20px;
+}
+
+.profile-info {
+  flex: 2;
+  font-size: 15px; 
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
 @media (min-width: 56em) {
   .container {
-    max-width: 38rem;
+    max-width: 44rem;
   }
 }
 
@@ -123,6 +146,48 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.profile-container {
+  display: flex; /* 사진과 텍스트를 나란히 배치 */
+  align-items: center; /* 중앙 정렬 */
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  margin-bottom: 20px; /* 아래쪽 간격 추가 */
+  flex-wrap: wrap; /* 공간이 좁아지면 아래로 배치될 수 있도록 */
+}
+
+.profile-photo {
+  flex-basis: 40%; /* 사진이 차지하는 비율을 40%로 설정 */
+  margin-right: 20px; /* 사진과 텍스트 사이 간격 */
+}
+
+.profile-photo img {
+  border-radius: 50%; /* 사진을 원형으로 만들기 */
+  width: 100%; /* 사진이 flex-basis에 맞게 크기가 조절됨 */
+  height: auto; /* 비율을 유지하며 크기 조절 */
+}
+
+.profile-info {
+  flex-basis: 60%; /* 텍스트가 차지하는 비율을 60%로 설정 */
+  max-width: 500px; /* 텍스트가 너무 길지 않도록 너비 제한 */
+}
+
+.profile-info h2 {
+  margin: 0;
+  color: #333;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.profile-info a {
+  color: #268bd2; /* 파란색으로 이메일 링크 강조 */
+  text-decoration: none;
+}
+
+.profile-info a:hover {
+  text-decoration: underline;
+}
 
 /*
  * Sidebar
@@ -530,6 +595,18 @@ a.pagination-item:hover {
 .theme-base-0f .sidebar-toggle,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+/* Blue */
+.theme-base-0e .sidebar,
+.theme-base-0e .sidebar-toggle:active,
+.theme-base-0e #sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #3b92b8;
+}
+.theme-base-0e .container a,
+.theme-base-0e .sidebar-toggle,
+.theme-base-0e .related-posts li a:hover {
+  color: #3b92b8;
 }
 
 
