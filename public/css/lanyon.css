@@ -42,7 +42,7 @@ body {
 
 html {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 16px; /* 폰트 크기를 18px로 변경 */
+  font-size: 14px; 
   line-height: 1.6; /* 라인 높이를 1.6으로 설정 */
   color: #333; /* 텍스트 색상을 다크 그레이로 변경 */
 }
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile-info {
   flex: 2;
-  font-size: 15px; 
+  font-size: 13px; 
 }
 img {
   width: 100%;
