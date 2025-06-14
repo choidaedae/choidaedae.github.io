@@ -160,7 +160,7 @@ img {
 }
 
 .profile-photo img {
-  border-radius: 50%; /* 사진을 원형으로 만들기 */
+  border-radius: 0%; /* 사진을 원형으로 만들기 */
   width: 100%; /* 사진이 flex-basis에 맞게 크기가 조절됨 */
   height: auto; /* 비율을 유지하며 크기 조절 */
 }
