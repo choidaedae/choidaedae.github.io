@@ -1,7 +1,7 @@
 # Setup
 title:               Daehyeon Choi
-tagline:             'Incoming M.S. Student @ KAIST, C.S'
-description:         'I am Daehyeon Choi, and I am Undergraduate in POTSECH. I am intersted in Generative Model and its various applications.'
+tagline:             'Master. Student @ KAIST, C.S'
+description:         'I am Daehyeon Choi, and I am Master Student in KAIST I am intersted in Generative Model and its various applications.'
 url:                 http://choidaedae.github.io/
 baseurl:             ''
 paginate:            5
@@ -10,8 +10,8 @@ permalink:           pretty
 # About/contact
 author:
   name:              Daehyeon Choi
-  linkedin:          https://www.linkedin.com/in/choi-daehyeon-570b0a214/
-  email:             daehyeonchoi@postech.ac.kr
+  linkedin:          https://www.linkedin.com/in/daehyeon-choi-570b0a214/
+  email:             daehyeonchoi@kaist.ac.kr
 
 # Gems
 plugins:
