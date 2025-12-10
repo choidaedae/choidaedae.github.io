@@ -3,9 +3,11 @@ title:               Daehyeon Choi
 tagline:             'Master. Student @ KAIST, C.S'
 description:         'I am Daehyeon Choi, and I am Master Student in KAIST I am intersted in Generative Model and its various applications.'
 url:                 http://choidaedae.github.io/
-baseurl:             ''
+baseurl:             
 paginate:            5
 permalink:           pretty
+include:
+  - _assets
 
 # About/contact
 author:
