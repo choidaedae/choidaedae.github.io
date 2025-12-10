@@ -28,6 +28,7 @@ title: Daehyeon Choi
         }
     }
 
+    /* 좌측 프로필 스타일 */
     .profile-photo img {
         border-radius: 5px;
         margin-bottom: 15px;
@@ -46,8 +47,6 @@ title: Daehyeon Choi
     }
 
     /* Publications 스타일 */
-    /* 자동 넘버링을 위한 카운터 설정 (총 3개 논문이라고 가정하고 4부터 시작해서 하나씩 뺌, 혹은 flex-direction: column-reverse 등 사용 가능하나, 여기서는 명시적 카운터 사용) */
-    /* 가장 쉬운 방법: HTML 순서대로 번호를 매기되, 최신순이므로 역순(3, 2, 1)을 수동으로 넣지 않고 CSS로 처리 */
     #publications {
         counter-reset: pub-counter 4; /* 논문 개수 + 1 */
     }
@@ -70,6 +69,18 @@ title: Daehyeon Choi
     }
     .pub-info {
         flex-grow: 1;
+    }
+
+    /* 모바일에서 Publication 레이아웃 변경 (이미지 위, 텍스트 아래) */
+    @media (max-width: 768px) {
+        .pub-item {
+            flex-direction: column;
+        }
+        .pub-thumb {
+            width: 100%; /* 모바일에서는 꽉 차게 */
+            max-width: 400px; /* 너무 커지지 않게 제한 */
+            margin-bottom: 10px;
+        }
     }
     
     /* 제목 라인 스타일 */
@@ -151,34 +162,40 @@ title: Daehyeon Choi
 <div class="page-container">
     <!-- ================= Left Column ================= -->
     <div class="left-sidebar">
-        <!-- Photo -->
-        <div class="profile-photo">
-            <img src="https://github.com/choidaedae/choidaedae.github.io/blob/master/_assets/profile.jpg?raw=true" width="100%" alt="My Selfie">
-        </div>
+         <!-- Photo -->
+         <div style="text-align: center; margin-bottom: 20px;">
+             <div class="profile-photo" style="margin: 0 auto 15px auto; max-width: 200px;">
+                 <img src="https://github.com/choidaedae/choidaedae.github.io/blob/master/_assets/profile.jpg?raw=true" width="100%" alt="My Selfie">
+             </div>
+             <h2><b>Daehyeon Choi</b></h2>
+             Master Student in KAIST CS<br>
+             <a href="https://visualai.kaist.ac.kr/">KAIST Visual AI Group</a><br>
+             <span style="font-family: 'Latin Modern Typewriter', monospace; font-style: normal;">{myfullname} at kaist.ac.kr</span>
+         </div>
 
-        <!-- Bio -->
-        <div class="profile-bio">
-            <h2><b>Bio</b></h2>
-            I am Daehyeon Choi, Master student in <a href="http://kaist.ac.kr">KAIST</a>, starting from Spring, 2025. I am a member of <a href="https://visualai.kaist.ac.kr/">KAIST Visual AI Group</a>, advised by Professor <a href="https://mhsung.github.io/">Minhyuk Sung</a>.<br>
-            Previously, I recevied a Bachelor of Science (B.S.) degree at POSTECH, 2025. I was an Intern in <a href="http://gengen.ai/">GenGenAI</a> and <a href="https://www.meissaplanet.com/">Meissa Planet</a>. And, I was an undergraduate intern in SNU, POSTECH, and KAIST.<br>
-            Currently, I am interested in <b>Large Vision-Language Model</b>, especially Visual Grounding leveraging pre-trained large-scale model's prior.
-            
-            <div class="contact-info">
-                <b>Contact Info</b>:<br>
-                <a href="mailto:daehyeonchoi@kaist.ac.kr">Email</a> / <a href="https://www.linkedin.com/in/daehyeon-choi-570b0a214/">Linkedin</a> / <a href="https://drive.google.com/file/d/1-3IMPOVSl3PWnQQN_kuu_9iXf77PIZIb/view?usp=sharing">CV</a> / <a href="https://scholar.google.com/citations?user=_EHGDJoAAAAJ&hl=en">Google Scholar</a><br><br>
-                <b>Articles</b>:<br>
-                <a href="https://times.postech.ac.kr/news/articleList.html?page=1&total=39&sc_section_code=kor&sc_sub_section_code=&sc_serial_code=&sc_area=A&sc_level=&sc_article_type=&sc_view_level=&sc_sdate=&sc_edate=&sc_serial_number=&sc_word=%EC%B5%9C%EB%8C%80%ED%98%84">Reporter of The Postech Times</a>
-            </div>
-        </div>
+         <!-- Bio -->
+         <div class="profile-bio">
+             <h2><b>Bio</b></h2>
+             I am Daehyeon Choi, Master student in <a href="http://kaist.ac.kr">KAIST</a>, starting from Spring, 2025. I am a member of <a href="https://visualai.kaist.ac.kr/">KAIST Visual AI Group</a>, advised by Professor <a href="https://mhsung.github.io/">Minhyuk Sung</a>.<br>
+             Previously, I recevied a Bachelor of Science (B.S.) degree at POSTECH, 2025. I was an Intern in <a href="http://gengen.ai/">GenGenAI</a> and <a href="https://www.meissaplanet.com/">Meissa Planet</a>. And, I was an undergraduate intern in SNU, POSTECH, and KAIST.<br>
+             Currently, I am interested in <b>Large Vision-Language Model</b>, especially Visual Grounding leveraging pre-trained large-scale model's prior.
+             
+             <div class="contact-info">
+                 <b>Contact Info</b>:<br>
+                 <a href="mailto:daehyeonchoi@kaist.ac.kr">Email</a> / <a href="https://www.linkedin.com/in/daehyeon-choi-570b0a214/">Linkedin</a> / <a href="https://drive.google.com/file/d/1-3IMPOVSl3PWnQQN_kuu_9iXf77PIZIb/view?usp=sharing">CV</a> / <a href="https://scholar.google.com/citations?user=_EHGDJoAAAAJ&hl=en">Google Scholar</a><br><br>
+                 <b>Articles</b>:<br>
+                 <a href="https://times.postech.ac.kr/news/articleList.html?page=1&total=39&sc_section_code=kor&sc_sub_section_code=&sc_serial_code=&sc_area=A&sc_level=&sc_article_type=&sc_view_level=&sc_sdate=&sc_edate=&sc_serial_number=&sc_word=%EC%B5%9C%EB%8C%80%ED%98%84">Reporter of The Postech Times</a>
+             </div>
+         </div>
 
-        <!-- Research Interests (Moved to Left) -->
-        <div class="research-interests">
-            <h3><b>Research Interests</b></h3>
-            <p>
-                <b>Vision-Language Model</b>:<br> Spatial Reasoning, Embodied<br><br>
-                <b>Generative Modeling</b>:<br> Image Synthesis, Image Editing, Generative PDE
-            </p>
-        </div>
+         <!-- Research Interests (Moved to Left) -->
+         <div class="research-interests">
+             <h3><b>Research Interests</b></h3>
+             <p>
+                 <b>Vision-Language Model</b>:<br> Spatial Reasoning, Embodied Question Answering<br>
+                 <b>Generative Modeling</b>:<br> Image Synthesis, Image Editing, Generative PDE
+             </p>
+         </div>
     </div>
 
     <!-- ================= Right Column ================= -->
@@ -192,9 +209,9 @@ title: Daehyeon Choi
                 <b>(Dec. 1st, 2025) </b>I won the National Master's Student Excellence Scholarship.<br>
                 <b>(Sep. 18th, 2025) </b><a href="http://origen2025.github.io">ORIGEN</a> is accepted to <a href="https://neurips.cc/">NeurIPS 2025</a>. See you in San Diego!<br>
                 <b>(Apr. 1st, 2025) </b><a href="http://origen2025.github.io">ORIGEN</a> is released on <a href="https://arxiv.org/abs/2503.22194">Arxiv</a>.<br>
-                <b>(Feb. 7th, 2025)</b> Earned B.S. degree from <a href="http://postech.ac.kr">POSTECH</a>!<br>
-                <b>(Dec. 2nd, 2024)</b> Won <a href="https://www.surim.or.kr/kr/talent/intro.php/">Donggyo Talent Fellowship</a>.<br>
-                <b>(Oct. 30th, 2024)</b> Will start M.S. at <a href="https://www.kaist.ac.kr/">KAIST</a> with Prof. <a href="https://mhsung.github.io/">Minhyuk Sung</a>.<br>
+                <b>(Feb. 7th, 2025)</b>I earned B.S. degree from <a href="http://postech.ac.kr">POSTECH</a>.<br>
+                <b>(Dec. 2nd, 2024)</b>I won <a href="https://www.surim.or.kr/kr/talent/intro.php/">Donggyo Talent Fellowship</a>.<br>
+                <b>(Oct. 30th, 2024)</b>I will start M.S. at <a href="https://www.kaist.ac.kr/">KAIST</a> with Prof. <a href="https://mhsung.github.io/">Minhyuk Sung</a>.<br>
                 <b>(Sep. 12th, 2024)</b> <a href="https://joonghyuk.com/instantdrag-web/">InstantDrag</a> is accepted to <a href="https://asia.siggraph.org/2024/">SIGGRAPH Asia 2024</a>.<br>
                 <b>(Jun. 24th, 2024)</b> Intern at <a href="http://gengen.ai/">GenGenAI</a>.
             </p>
@@ -253,7 +270,7 @@ title: Daehyeon Choi
             <!-- [1] InstantDrag -->
             <div class="pub-item">
                 <div class="pub-thumb">
-                    <img src="./_assets/InstantDrag.png" alt="InstantDrag">
+                    <img src="./_assets/instantdrag_teaser.jpg" alt="InstantDrag">
                 </div>
                 <div class="pub-info">
                     <div class="pub-header">
@@ -284,7 +301,7 @@ title: Daehyeon Choi
                 
                 <p><b>Seoul National University</b>, (Spring, 2024)<br>
                 - Exchange Student, Dept. of Electronic &amp; Computer Engineering<br>
-                - Research Intern @ <a href="https://jaesik.info">Visual &amp; Geometric Intelligence Lab, SNU</a></p>
+                - Research Intern in <a href="https://jaesik.info">Visual &amp; Geometric Intelligence Lab, SNU</a></p>
                 
                 <p><b>Pohang Institute of Science &amp; Technology (POSTECH)</b>, (2021 - 2024)<br>
                 - Bachelor Student, Dept. of Computer Science &amp; Engineering (Cumulative GPA: 3.85/4.30)</p>
@@ -304,34 +321,37 @@ title: Daehyeon Choi
                 <p><b>Research Intern</b>, <a href="https://www.meissaplanet.com/">Meissa Planet.</a> (Jun. 2023 ~ Aug. 2023)<br>
                 - In Research Team, Satelite Analysis with Deep learning, especially Semantic Change Detection</p>
                 
-                <hr>
             </div>
         </details>
 
         <details>
             <summary><h3>Research Experiences</h3></summary>
             <div class="details-content">
-                <p><b>Undergraduate Research Intern</b>, <a href="https://visualai.kaist.ac.kr/">Visual AI Group @ KAIST.</a> (Jun. 2024 ~ Aug. 2024)<br>
+                 <p><b>Undergraduate Research Intern</b>, <a href="https://visualai.kaist.ac.kr/">Visual AI Group @ KAIST.</a> (Jun. 2024 ~ Aug. 2024)<br>
                     - Diffusion Models, 3D-aware Editing<br>
                     - Under the supervision by Prof. Minhyuk Sung</p>
                     
-                <p><b>Undergraduate Research Intern</b>, <a href="http://jaesik.info/lab">VGI Lab @ SNU.</a> (Oct. 2023 ~ Jun. 2024)<br>
-                - Diffusion Models, Drag Editing<br>
-                - Participated to <a href="https://joonghyuk.com/instantdrag-web/">InstantDrag</a> (SIGGRAPH Asia 2024).<br>
-                - Under the supervision by <a href="https://jaesik.info">Prof. Jaesik Park</a>, co-worked with <a href="https://joonghyuk.com/">Joonghyuk Shin</a>.</p>
-                
-                <p><b>Undergraduate Research Intern</b>, <a href="http://cvlab.postech.ac.kr">CV Lab @ POSTECH.</a> (Sep. 2022 ~ Feb. 2023)<br>
-                - Generative Adversarial Networks<br>
-                - Under the supervision by Prof. Jaesik Park</p>
-                <hr>
-            </div>
-        </details>
-
+                 <p><b>Undergraduate Research Intern</b>, <a href="http://jaesik.info/lab">VGI Lab @ SNU.</a> (Oct. 2023 ~ Jun. 2024)<br>
+                 - Diffusion Models, Drag Editing<br>
+                 - Participated to <a href="https://joonghyuk.com/instantdrag-web/">InstantDrag</a> (SIGGRAPH Asia 2024).<br>
+                 - Under the supervision by <a href="https://jaesik.info">Prof. Jaesik Park</a>, co-worked with <a href="https://joonghyuk.com/">Joonghyuk Shin</a>.</p>
+                 
+                 <p><b>Undergraduate Research Intern</b>, <a href="http://cvlab.postech.ac.kr">CV Lab @ POSTECH.</a> (Sep. 2022 ~ Feb. 2023)<br>
+                 - Generative Adversarial Networks<br>
+                 - Under the supervision by Prof. Jaesik Park</p>
+                 <hr>
+             </div>
+         </details>
+ 
+   
   
-
         <details>
             <summary><h3>Award & Scholarships</h3></summary>
             <div class="details-content">
+                <p><b>National Master's Student Excellence Scholarship</b>, Korea Government. (Dec. 2025)<br>
+                - 2,500,000 KRW per semester<br>
+                - Outstanding master students majoring Science and Engineering in Korea.</p>
+                    
                 <p><b>Donggyo Talent Fellowship, Silver Prize</b>, Surim Foundation. (Dec. 2024)<br>
                 - 1,000,000 KRW<br>
                 - Outstanding 25 undergrads who have greatly contributed to the promotion and development of the university's honor.</p>
