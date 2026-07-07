@@ -48,7 +48,7 @@ title: Daehyeon Choi
 
     /* Publications 스타일 */
     #publications {
-        counter-reset: pub-counter 5; /* 논문 개수 + 1 */
+        counter-reset: pub-counter 6; /* 논문 개수 + 1 */
     }
     
     .pub-item {
@@ -211,6 +211,7 @@ title: Daehyeon Choi
         <section id="news">
             <h2 style="margin-top: -20px;"><b>Recent News</b></h2>
             <p>
+                <b>(Jul. 7th, 2026) </b>I will be presenting two preprint papers in ICML 2026 workshop; <a href="http://active-view-selection.github.io">Active View Selection</a> and <a href="https://visual-retrieval-heads.github.io">Visual Retrieval Heads</a>. See you in Seoul!<br>
                 <b>(Jan. 13th, 2026) </b>DiffusionRollout is accepted to <a href="https://jmlr.org/tmlr">TMLR</a>.<br>
                 <b>(Dec. 12th, 2025) </b>A paper about <a href="http://active-view-selection.github.io">Ambulatory Vision System</a> is released.<br>
                 <b>(Dec. 1st, 2025) </b>I won the National Master's Student Excellence Scholarship.<br>
@@ -228,28 +229,28 @@ title: Daehyeon Choi
         <!-- Publications -->
         <section id="publications">
             <h2><b>Publications</b></h2>
-            <!-- [4] DiffusionRollout -->
+            <!-- [5] VRH -->
             <div class="pub-item">
                 <div class="pub-thumb">
-                    <img src="./_assets/diffusionrollout.png" alt="DiffusionRollout">
+                    <img src="./_assets/VRH.png" alt="VisualRetrievalHeads">
                 </div>
                 <div class="pub-info">
                     <div class="pub-header">
-                        <b>DiffusionRollout: Uncertainty-Aware Rollout Planning in Long-Horizon PDE Solving</b><br>
-                        <span class="pub-venue">TMLR</span>
+                        <a href="http://visual-retrieval-heads.github.io/" class="pub-title-link">Retrieval Heads Meet Vision: Uncovering How VLMs Locate and Extract Visual Information</a><br>
+                        <span class="pub-venue">Mechanistic Interpretability Workshop @ ICML 2026</span>   
                     </div>
                     <div class="pub-authors">
-                        <a href="https://dvelopery0115.github.io/">Seungwoo Yoo*</a>, <a href="https://63days.github.io/">Juil Koo*</a>, <b>Daehyeon Choi*</b>, <a href="https://mhsung.github.io">Minhyuk Sung</a> (* Equal Contribution)
+                        <a href="https://charlieppark.github.io/">Chanho Park</a>, <b>Daehyeon Choi</b>, <a href="https://jyunlee.github.io/">Jihyun Lee</a>, <a href="https://mhsung.github.io">Minhyuk Sung</a>
                     </div>
                     <div class="pub-desc">
-                        We propose <em>DiffusionRollout</em>, which utilizes diffusion models' stochasitcity as rollout strategy to solve long-horizon Partial Differential Equations (PDEs).
+                        We identified Vision-Language Model's mechanism of visual information processing; a few set of attention heads have most of attention scores and extract language-relevant visual information.
                     </div>
                     <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2602.13616">Arxiv</a> / <a href="https://openreview.net/forum?id=OCzcGOzgzz">OpenReview</a> 
+                        <a href="https://visual-retrieval-heads.github.io/">Project Page</a> / <a href="https://openreview.net/forum?id=396ekAMv1z&referrer=%5BAuthor%20Console%5D">OpenReview</a>
                     </div>
                 </div>
             </div>
-            <!-- [3] AVS -->
+            <!-- [4] AVS -->
             <div class="pub-item">
                 <div class="pub-thumb">
                     <img src="./_assets/AVS.png" alt="ActiveViewSelection">
@@ -267,6 +268,27 @@ title: Daehyeon Choi
                     </div>
                     <div class="pub-links">
                         <a href="https://active-view-selection.github.io/">Project Page</a> / <a href="https://github.com/KAIST-Visual-AI-Group/VG-AVS">Code</a> / <a href="https://arxiv.org/abs/2512.13250">Arxiv</a>
+                    </div>
+                </div>
+            </div>
+            <!-- [3] DiffusionRollout -->
+            <div class="pub-item">
+                <div class="pub-thumb">
+                    <img src="./_assets/diffusionrollout.png" alt="DiffusionRollout">
+                </div>
+                <div class="pub-info">
+                    <div class="pub-header">
+                        <b>DiffusionRollout: Uncertainty-Aware Rollout Planning in Long-Horizon PDE Solving</b><br>
+                        <span class="pub-venue">TMLR</span>
+                    </div>
+                    <div class="pub-authors">
+                        <a href="https://dvelopery0115.github.io/">Seungwoo Yoo*</a>, <a href="https://63days.github.io/">Juil Koo*</a>, <b>Daehyeon Choi*</b>, <a href="https://mhsung.github.io">Minhyuk Sung</a> (* Equal Contribution)
+                    </div>
+                    <div class="pub-desc">
+                        We propose <em>DiffusionRollout</em>, which utilizes diffusion models' stochasitcity as rollout strategy to solve long-horizon Partial Differential Equations (PDEs).
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2602.13616">Arxiv</a> / <a href="https://openreview.net/forum?id=OCzcGOzgzz">OpenReview</a> 
                     </div>
                 </div>
             </div>
